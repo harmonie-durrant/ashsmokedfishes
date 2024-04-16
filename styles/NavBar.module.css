@@ -1,0 +1,67 @@
+.navlink {
+    display: flex;
+    list-style: none;
+    margin: 0 0.5rem;
+    text-transform: uppercase;
+    background: url(/textures/brush-stroke-banner-7-small.png);
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    padding: 8px 0px;
+    color: white;
+    width: 165px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navlink a {
+    text-decoration: none;
+    color: white;
+}
+
+.navlink a:hover {
+    color: #f9826c;
+}
+
+.badge::after{
+    content:attr(value);
+    font-size:12px;
+    color: rgb(0, 0, 0);
+    background: red;
+    border-radius:50%;
+    padding: 0 5px;
+    position:relative;
+    left:-8px;
+    top:-10px;
+    opacity:0.9;
+}
+
+.highlight {
+    background: url(/textures/brush-stroke-banner-7.png);
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    padding: 8px 0;
+}
+
+.btnPrimary {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+}
+
+.btnPrimary::before {
+    position: absolute;
+    content: "";
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 26.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 52' style='enable-background:new 0 0 32 52;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23000000;%7D%0A%3C/style%3E%3Cpath id='Path_32' class='st0' d='M8.8,52c-0.1,0-0.3-0.1-0.3-0.2c0,0-0.1-0.1-0.1-0.1l-0.2,0c-0.3,0-0.6-0.1-0.9-0.1H7.1 c-0.2,0-0.5,0-0.7,0H6.4c-0.1,0-0.1,0-0.2,0c-0.2,0-0.4,0-0.6,0.1c-0.3,0.1-0.7,0.2-1.1,0.2c-0.1,0-0.1,0-0.2,0 c-1-0.2-1.9-0.5-2.9-0.8c-0.3-0.1-0.5-0.4-0.5-0.7c0-0.2-0.1-0.4-0.1-0.6c-0.1-0.6-0.1-1.1-0.1-1.7c0-0.3,0-0.6,0-1 c0-0.2,0-0.3,0-0.5c0-0.2,0-0.5,0-0.7c0-0.5,0-1.1,0-1.6c0.1-1,0.1-2.1-0.1-3.1c-0.1-0.4-0.1-0.7-0.1-1.1c0-0.6,0-1.2,0.1-1.8 c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4,0.1-0.6c0-0.3,0-0.6,0-0.9v0c0-1.6-0.1-3.1-0.1-4.6c-0.1-1.2,0-2.5,0-3.7c0-0.9,0.1-1.8,0-2.7 c0-0.1,0-0.1,0-0.2c0.2-0.5,0.2-1.1,0-1.6v0c0.1-0.1,0.2-0.1,0.4-0.2c0-0.2,0-0.4,0-0.6c-0.1-0.2-0.3-0.4-0.4-0.5c0-0.1,0-0.2,0-0.2 c0-0.1,0-0.2,0-0.4c0-0.3-0.1-0.7-0.1-1.1c0-0.5-0.1-1.1-0.2-1.6c0-0.1,0-0.3,0-0.4c0-0.6,0-1.1-0.1-1.7c0-0.2-0.1-0.4-0.1-0.6 C0,15.7,0,15.6,0.2,15.4c0.2-0.3,0.3-0.4,0.2-1.1v-0.1c0-0.2,0-0.3,0-0.5c0-0.6,0-1.3-0.1-1.9c-0.1-0.5-0.1-0.9,0.1-1.4 c0-0.2,0.1-0.3,0.1-0.6C0.4,9.4,0.4,9,0.4,8.6c0-0.2,0-0.4,0-0.6c0-0.1,0-0.2,0-0.3c0-0.2,0-0.3,0-0.5c-0.1-0.8,0-1.7,0.1-2.5 c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0c0-0.1,0-0.2,0-0.3c0-0.2,0-0.5,0-0.7c0-0.4,0-0.8,0-1.1V2.2c0-0.5,0-0.9,0.1-1.4 c0-0.2,0.1-0.3,0.3-0.4C1.1,0.1,1.5,0,1.9,0C2,0,2,0,2.1,0c0.3,0,0.5,0.3,0.7,0.5l0.1,0.1c0,0,0,0,0,0c0,0,0,0,0,0 c0.4,0.4,0.5,0.6,0.7,0.6c0.2,0,0.4-0.1,0.7-0.4c0.3-0.2,0.6-0.3,1-0.3c0.3,0,0.6,0.1,0.8,0.2c0,0,0.1,0,0.1,0.1 c0.1,0,0.1,0.1,0.2,0.1l0,0c0.1,0,0.2,0,0.2,0.1c0,0,0.1,0,0.1,0c0.1,0,0.2-0.1,0.3-0.1c0.3,0,0.6,0.2,0.8,0.4 c0.2,0.2,0.4,0.3,0.6,0.3c0.1,0,0.1,0,0.2,0c0.4,0,0.8-0.2,1.1-0.5C10,1,10.2,0.9,10.4,0.7c0.3-0.2,0.6-0.3,0.9-0.3 c0.3,0,0.5,0.1,0.7,0.2C12.7,1,13.3,1.4,14,1.9C14,2,14.1,2,14.2,2.1c0.2,0,0.4,0,0.6,0c0.1,0,0.3,0,0.4,0s0.2,0,0.3,0 c0.3,0,0.6,0,0.9-0.1h0l0,0l0,0c0.1-0.2,0.3-0.3,0.5-0.5L17,1.4c0,0,0.1,0,0.1,0c0,0,0,0,0.1,0l0.2,0.3l0,0c0.1,0,0.2-0.1,0.4-0.1 c0.3,0,0.5-0.2,0.7-0.4C22.9,0.4,27.4,0,32,0v52c-5.6-0.2-9.5-0.6-11.9-0.6c-0.9,0-1.7,0-2.6-0.1c-0.4-0.1-0.7-0.2-1.1-0.2 c-0.4,0-0.8,0.1-1.1,0.2c-0.1,0.1-0.3,0.1-0.4,0.1c-0.7,0.1-1.5,0.2-2.2,0.2c-0.7,0-1.3-0.1-2-0.2c-0.2-0.1-0.5-0.1-0.7-0.1 c-0.2,0-0.4,0-0.6,0.1c0,0.4-0.1,0.4-0.4,0.5C8.9,52,8.9,52,8.8,52z'/%3E%3C/svg%3E");
+    background-size: 28px 28px;
+    height: 28px;
+    width: 28px;
+}
+
+.highlight {
+    background: url(/textures/brush-stroke-banner-7.png);
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    padding: 8px 0;
+}

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Chinacat";
+    src: url("/fonts/chinrg___.ttf");
+    src: url("/fonts/chint___.ttf");
+    font-style: normal;
+    font-display: swap
+}
+
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Chinacat', sans-serif;
+    background-color: #f1f1f1;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

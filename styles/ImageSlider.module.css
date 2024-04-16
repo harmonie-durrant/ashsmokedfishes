@@ -1,0 +1,17 @@
+.image {
+    object-fit: cover;
+    max-height: 300px;
+    max-width: 100%;
+    border-radius: 0px;
+}
+
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+
+.slideActive {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}
