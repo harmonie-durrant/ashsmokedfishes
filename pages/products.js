@@ -17,10 +17,6 @@ export default function Products( { products } ) {
                     <Image className="border-2 border-solid border-black" alt="productsTopImage" src="/images/productsTop.png" layout='fill' objectFit='cover' priority={true} />
                     <div className="absolute top-1/2 left-1/2 bg-white p-6 text-center -translate-x-1/2 -translate-y-1/2 opacity-80 border border-black border-solid">
                         <div>
-							{
-							(process.env.NODE_ENV === "development") ? "DEV" : "PROD"
-
-							}
                             <h2 className='text-5xl font-bold mb-4'>Products</h2>
                             <p className='text-xl'>Browse our fish selection</p>
                         </div>
