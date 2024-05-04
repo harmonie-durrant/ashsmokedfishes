@@ -4,6 +4,10 @@ export default function Document() {
     return (
         <Html>
             <Head>
+                <meta
+                    http-equiv="Content-Security-Policy"
+                    content="default-src 'self'; img-src https://*; child-src 'none';"
+                />
                 <link rel="shortcut icon" href="/favicon/favicon.ico" />
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="apple-touch-icon" href="/logo-192x192.png" />
