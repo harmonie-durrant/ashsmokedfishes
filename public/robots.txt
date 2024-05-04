@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /login
 Disallow: /admin
-Disallow: /recipies
 Disallow: /policy
 Disallow: /api/

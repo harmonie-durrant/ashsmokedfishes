@@ -29,7 +29,7 @@ export default function NavBar() {
                         <Link href="/about">About us</Link>
                     </li>
                     <li className={styles.navlink}>
-                        <a href="products">Our Products</a>
+                        <a href="/products">Our Products</a>
                     </li>
                     <li className={styles.navlink}>
                         <Link href="/contact">Contact</Link>

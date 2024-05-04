@@ -1,10 +1,18 @@
+'use client'
+
 import Image from 'next/image';
+
 import Link from 'next/link';
+
 import ProductCard from '../components/ProductCard';
+
+import { getProducts } from "../firebase/firestore/getData";
 
 import { NextSeo } from 'next-seo';
 
-export default function Products( { products } ) {
+export default function Products({ products }) {
+
+    console.log(products);
 
     return (
         <>
@@ -45,8 +53,7 @@ export default function Products( { products } ) {
 
 Products.getInitialProps = async () => {
 
-    const res = await fetch((process.env.NODE_ENV === "development") ? `http://127.0.0.1:3000/api/products`: `https://www.ashsmokedfishes.co.uk/api/products`, { method: 'GET' });
-    const {data} = await res.json()
+    const data = await getProducts();
 
     return { products: data };
 

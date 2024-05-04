@@ -1,3 +1,5 @@
+'use client'
+
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -10,6 +12,8 @@ import {
 
 import { ProductJsonLd } from 'next-seo';
 
+import { getProducts } from "../../firebase/firestore/getData";
+
 export default function ProductPage({ products }) {
 
     const router = useRouter();
@@ -18,13 +22,14 @@ export default function ProductPage({ products }) {
 
     if (product === undefined) {
         return (
-            <button
-                onClick={() => {
-                    console.log(products)
-                }}
-            >
-                GET PRODUCTS
-            </button>
+            <>
+                <p>
+                    product not found
+                </p>
+                <Link href="/products" >
+                    <p className="text-gray-600 hover:text-red-300"> See all products </p>
+                </Link>
+            </>
         )
     }
 
@@ -108,8 +113,7 @@ export default function ProductPage({ products }) {
 
 ProductPage.getInitialProps = async () => {
 
-    const res = await fetch((process.env.NODE_ENV === "development") ? `http://127.0.0.1:3000/api/products`: `https://www.ashsmokedfishes.co.uk/api/products`, { method: 'GET' });
-    const {data} = await res.json();
+    const data = await getProducts();
 
     return { products: data };
 

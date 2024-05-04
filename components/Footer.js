@@ -2,9 +2,9 @@ import Link from "next/link";
 import Reviews from "./Reviews";
 
 export default function Footer() {
+
     return(
         <>
-            <Reviews />
             <footer className="p-4 bg-white font- mobile:p-6">
                 <div className="flex flex-col items-center justify-center mobile:flex-row tablet:justify-evenly">
                     <div className="grid grid-cols-1 tablet:grid-cols-3 ">

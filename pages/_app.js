@@ -8,6 +8,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles"; // ???
 import {motion} from 'framer-motion';
 //google
 import { GoogleAnalytics, usePageViews } from "nextjs-google-analytics";
+//auth
+import { AuthContextProvider } from '../context/AuthContext'
 
 const theme = createTheme({
     palette: {
@@ -21,41 +23,45 @@ const theme = createTheme({
     },
 });
 
-export default function App({ Component, pageProps, reviews }) {
+import { Suspense } from 'react';
+
+export default function App({ Component, pageProps }) {
 
     const router = useRouter()
 
     usePageViews()
 
     return (
-        <ThemeProvider theme={theme}>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7893331997065142" crossOrigin="anonymous" />
-            <GoogleAnalytics />
-            <div className='text-neutral flex justify-center items-center'>
-                <div className='w-full max-w-[2175px]'>
-                    <NavBar />
-                    <motion.div
-                        key={router.route}
-                        initial="pageInitial"
-                        animate="pageAnimate"
-                        variants={{
-                            pageInitial: {
-                                opacity: 0
-                            },
-                            pageAnimate: {
-                                opacity: 1,
-                                transition: {
-                                    delay: .25
-                                }
-                            },
+        <AuthContextProvider>
+            <ThemeProvider theme={theme}>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7893331997065142" crossOrigin="anonymous" />
+                <GoogleAnalytics />
+                <div className='text-neutral flex justify-center items-center'>
+                    <div className='w-full max-w-[2175px]'>
+                        <NavBar />
+                        <motion.div
+                            key={router.route}
+                            initial="pageInitial"
+                            animate="pageAnimate"
+                            variants={{
+                                pageInitial: {
+                                    opacity: 0
+                                },
+                                pageAnimate: {
+                                    opacity: 1,
+                                    transition: {
+                                        delay: .25
+                                    }
+                                },
 
-                        }}
-                    >
-                        <Component {...pageProps}/>
-                    </motion.div>
-                    <Footer />
+                            }}
+                        >
+                            <Component {...pageProps}/>
+                        </motion.div>
+                        <Footer />
+                    </div>
                 </div>
-            </div>
-        </ThemeProvider>
+            </ThemeProvider>
+        </AuthContextProvider>
     )
 }

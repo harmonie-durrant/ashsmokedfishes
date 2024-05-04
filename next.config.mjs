@@ -8,7 +8,7 @@ const withPWA = withPWAInit({
 
 export default withPWA({
     images: {
-        domains: ['imgur.com', 'i.imgur.com'],
+        domains: ['firebasestorage.googleapis.com', 'i.imgur.com'],
     },
     i18n: {
         locales: ["en"],

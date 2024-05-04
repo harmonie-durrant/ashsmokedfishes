@@ -1,7 +1,11 @@
+'use client'
+
 import { useRouter } from 'next/router';
 import ProductCard from '../../components/ProductCard';
 
 import { NextSeo } from 'next-seo';
+
+import { getProducts } from "../../firebase/firestore/getData";
 
 export default function CategoryPage({ products }) {
 
@@ -39,7 +43,8 @@ export default function CategoryPage({ products }) {
 
 CategoryPage.getInitialProps = async () => {
 
-    const res = await fetch((process.env.NODE_ENV === "development") ? `http://127.0.0.1:3000/api/products`: `https://www.ashsmokedfishes.co.uk/api/products`, { method: 'GET' });
-    const {data} = await res.json()
+    const data = await getProducts();
+
     return { products: data };
+
 }
