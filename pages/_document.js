@@ -6,7 +6,7 @@ export default function Document() {
             <Head>
                 <meta
                     http-equiv="Content-Security-Policy"
-                    content="default-src 'self'; img-src https://*; child-src 'none';"
+                    content="img-src https://*;"
                 />
                 <link rel="shortcut icon" href="/favicon/favicon.ico" />
                 <link rel="manifest" href="/manifest.json" />
