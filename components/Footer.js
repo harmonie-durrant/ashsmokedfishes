@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Reviews from "./Reviews";
 
 export default function Footer() {
 
