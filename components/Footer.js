@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
                     <div className="grid grid-cols-1 tablet:grid-cols-3 ">
                         <div className="mb-6 tablet:mb-0 mr-4 tablet:mr-24 flex justify-center items-center">
                             <Link href="/">
-                                <img src="https://i.imgur.com/i7zmNLH.jpg" alt="Ash Logo" className="w-auto h-32" />
+                                <Image src="/logo.jpg" alt="Ash Logo" width={128} height={128} />
                             </Link>
                         </div>
                         <div className="mb-6 tablet:mb-0 mr-4 tablet:mr-24 text-center">
