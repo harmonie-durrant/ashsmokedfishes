@@ -28,9 +28,9 @@ export default function ImageSlider() {
             </div>
             <div className="flex justify-center items-center">
                 <div className="w-4/5 p-2 desktop:p-5 tablet:p-3 flex flex-col justify-center bg-white my-10 rounded-lg border border-gray-200 shadow-md">
-                    <p className='text-xl tablet:text-4xl font-bold mb-8'>
+                    <h2 className='text-xl tablet:text-4xl font-bold mb-8'>
                         <strong>Ash Smoked Fishes</strong>
-                    </p>
+                    </h2>
                     <div className='tablet:text-2xl font-bold mb-8'>
                         All our fishes are lightly smoked here on Aldeburgh beach.
                         Traditionally fish is more heavily smoked as a preservative, but our light smoking is sufficient only to enhance the flavour.
